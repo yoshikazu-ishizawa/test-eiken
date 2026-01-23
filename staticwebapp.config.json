@@ -1,1 +1,0 @@
-{"routes":[{"route":"/health/*","serve":"/health/index.html"},{"route":"/*","rewrite":"/api/gateway"}]}
