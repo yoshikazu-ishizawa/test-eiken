@@ -1,0 +1,17 @@
+
+{
+  "responseOverrides": {
+    "403": {
+      "rewrite": "/403.html"
+    }
+  },
+  "routes": [
+    {
+      "route": "/*",
+      "allowedRoles": ["anonymous"],
+      "headers": {
+        "X-Required-Host": "fd-ishizawa-test"
+      }
+    }
+  ]
+}
