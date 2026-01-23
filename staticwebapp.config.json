@@ -1,0 +1,17 @@
+
+{
+  "routes": [
+    {
+      "route": "/*",
+      "allowedRoles": ["anonymous"],
+      "headers": {
+        "X-Allowed-From": "fd-ishizawa-test"
+      }
+    }
+  ],
+  "responseOverrides": {
+    "403": {
+      "rewrite": "/403.html"
+    }
+  }
+}
