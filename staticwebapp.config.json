@@ -1,17 +1,14 @@
 
 {
-  "routes": [
-    {
-      "route": "/*",
-      "allowedRoles": ["anonymous"],
-      "headers": {
-        "X-Allowed-From": "fd-ishizawa-test"
-      }
-    }
-  ],
-  "responseOverrides": {
-    "403": {
-      "rewrite": "/403.html"
+  "$schema": "https://json.schemastore.org/staticwebapp.config.json",
+  "networking": {
+    "allowedIpRanges": [
+      "AzureFrontDoor.Backend"
+    ]
+  },
+  "forwardingGateway": {
+    "requiredHeaders": {
+      "X-Azure-FDID": "6d3e5357-f3ba-43a6-9285-63fc2c90acac"
     }
   }
 }
