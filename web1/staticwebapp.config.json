@@ -1,10 +1,4 @@
 {  
-  "routes": [
-    {
-      "route": "/healthprobe",
-      "allowedRoles": ["anonymous"]
-    }
-  ],
   "$schema": "https://json.schemastore.org/staticwebapp.config.json",
   "networking": {
     "allowedIpRanges": [
