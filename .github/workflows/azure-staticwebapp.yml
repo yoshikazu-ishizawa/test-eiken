@@ -21,8 +21,8 @@ on:
 
 # Environment variables available to all jobs and steps in this workflow
 env:
-  APP_LOCATION: "web1" # location of your client code
-  APP_ARTIFACT_LOCATION: "web1" # location of client code build output
+  APP_LOCATION: "src" # location of your client code
+  APP_ARTIFACT_LOCATION: "src" # location of client code build output
   AZURE_STATIC_WEB_APPS_API_TOKEN: ${{ secrets.AZURE_STATIC_WEB1_APPS_API_TOKEN }} # secret containing deployment token for your static web app
 
 permissions:
@@ -46,7 +46,7 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ env.AZURE_STATIC_WEB_APPS_API_TOKEN }} # secret containing api token for app
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
-          app_location: "web1"
+          app_location: "src"
           skip_app_build: true
           action: "upload"
           ###### End of Repository/Build Configurations ######
